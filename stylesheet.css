@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+.head {
+    background-color: rgb(5, 5, 5);
+}
+
+.knap {
+    padding: 10px 20px;
+    background: rgb(169, 20, 70);
+    color: pink;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+    margin-left: 5px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    
+}
+
+.input {
+    border: solid black;
+    padding: 10px;
+    font-size: 16px;
+    width: 500px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+
+}
+
+.close {
+    color: rgb(255, 253, 253);
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+#divlist div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    gap: 10px;
+}
+
+.toDoHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: palevioletred;
+}
+
+.inputWrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.h1 {
+    color: black;
+    font-size: 50px;
+    font-family: Impact, fantasy;
+    text-shadow: 10px 2px rgb(169, 20, 70);
+    margin-bottom: 10px;
+}
+
+.p0 {
+    font-family: Impact, fantasy;
+    font-size: 20px;
+    margin-top: 10px;
+    
+}
+
+.p1 {
+    font-family: Impact, fantasy;
+    color: pink;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    border-bottom: 10px solid black;
+    padding: 20px;
+    background-color: rgb(169, 20, 70);
+}
+
+.listItems div:nth-child(odd):not(.done){
+    background: pink;
+}
+
+.listItems div:nth-child(even):not(.done){
+    background: palevioletred;
+}
+
+.listItems input[type="checkbox"]:checked + span {
+    background: rgb(92, 89, 89);
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.done {
+    background: rgb(92, 89, 89);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.done .textTodo {
+    text-decoration: line-through;
+    color: #fff;
+}
+
