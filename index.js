@@ -2,6 +2,14 @@
 
 const toDoList = []
 
+const EnterBtn = document.getElementById("input")
+EnterBtn.addEventListener("keypress", function(event) {
+        if (event.key == "Enter") {
+            event.preventDefault();
+            document.getElementById("knap").click();
+        }
+    });
+
 function add(){
     let value = document.getElementById("input").value.trim()
 
@@ -13,9 +21,6 @@ function add(){
     value = value.charAt(0).toUpperCase() + value.slice(1)
 
     toDoList.push(value)
-
-    const ikkeTjekket = document.getElementById("ikkeTjekket")
-    const tjekket = document.getElementById("tjekket")
 
     const divlist = document.getElementById("divList")
 
@@ -34,7 +39,11 @@ function add(){
     close.className = "close"
     close.style.cursor = "pointer"
 
-    checkbox.addEventListener("change", function() {
+    itemDiv.addEventListener("click", function(e) {
+        if (e.target == close) return;
+
+        checkbox.checked = !checkbox.checked; 
+
             if (checkbox.checked){
                 itemDiv.classList.add("done")
             } else {
